@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">vatavarana</string>
+    <string name="weather_matters">Weather Matters \nWe\'ve Got the Details</string>
+    <string name="design_by">MADE WITH ❤️ BY</string>
+    <string name="developer_name">Valen Patel</string>
+    <string name="app_version">APP VERSION 1.0.1</string>
 </resources>
