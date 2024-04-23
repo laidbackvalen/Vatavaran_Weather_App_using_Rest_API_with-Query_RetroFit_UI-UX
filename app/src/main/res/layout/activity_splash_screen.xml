@@ -23,7 +23,7 @@
         app:lottie_rawRes="@raw/splash_weather" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textWeatherMatters"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/hind_vadodara_medium"
@@ -38,7 +38,7 @@
         app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/madeWith"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="92dp"
@@ -54,7 +54,7 @@
         app:layout_constraintStart_toStartOf="@+id/lottieAnimationView" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/bydeveloperName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
@@ -67,9 +67,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/lottieAnimationView"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/madeWith" />
 
     <TextView
+        android:id="@+id/version"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"

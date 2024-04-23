@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
+    android:background="@drawable/raining_gradient"
     android:layout_height="match_parent"
-    android:background="@drawable/rect_bottom_radius_purple"
     tools:context=".MainActivity">
 
     <SearchView
-        android:id="@+id/searchView"
+        android:id="@+id/searchViewMain"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -26,7 +26,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/dateMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -34,11 +34,11 @@
         android:text="Date"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textColor="@color/white"
-        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintStart_toStartOf="@+id/cityMain"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/cityMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -48,10 +48,10 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="@+id/lottieAnimationView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/dateMain" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/temperatureReadingMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/hind_vadodara_medium"
@@ -74,7 +74,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@color/white"
         app:layout_constraintEnd_toStartOf="@+id/textView9"
-        app:layout_constraintTop_toTopOf="@+id/textView7" />
+        app:layout_constraintTop_toTopOf="@+id/temperatureReadingMain" />
 
     <TextView
         android:id="@+id/textView9"
@@ -85,33 +85,35 @@
         android:text="C"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/searchView"
-        app:layout_constraintTop_toTopOf="@+id/textView7" />
+        app:layout_constraintEnd_toEndOf="@+id/searchViewMain"
+        app:layout_constraintTop_toTopOf="@+id/temperatureReadingMain" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/minTempMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/hind_vadodara_medium"
         android:text="Min : 23.32"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textColor="@color/white"
-        app:layout_constraintStart_toStartOf="@+id/textView7"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        app:layout_constraintEnd_toEndOf="@+id/maxTempMain"
+        app:layout_constraintTop_toBottomOf="@+id/temperatureReadingMain" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/maxTempMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
         android:fontFamily="@font/hind_vadodara_medium"
-        android:text="Max : 24.42"
+        android:text="Max : 38.42"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textColor="@color/white"
-        app:layout_constraintStart_toStartOf="@+id/textView8"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintEnd_toEndOf="@+id/temperatureReadingMain"
+        app:layout_constraintStart_toStartOf="@+id/minTempMain"
+        app:layout_constraintTop_toBottomOf="@+id/minTempMain" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/dayTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="124dp"
@@ -120,32 +122,32 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/searchView"
+        app:layout_constraintEnd_toEndOf="@+id/searchViewMain"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="@+id/searchView"
+        app:layout_constraintStart_toStartOf="@+id/searchViewMain"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/todaysConditionbelowDay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/hind_vadodara_medium"
         android:text="Sunny"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/textView10"
-        app:layout_constraintStart_toStartOf="@+id/textView10"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        app:layout_constraintEnd_toEndOf="@+id/dayTxt"
+        app:layout_constraintStart_toStartOf="@+id/dayTxt"
+        app:layout_constraintTop_toBottomOf="@+id/dayTxt" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toStartOf="@+id/textView7"
+        app:layout_constraintEnd_toStartOf="@+id/temperatureReadingMain"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/searchView"
-        app:layout_constraintTop_toBottomOf="@+id/searchView" />
+        app:layout_constraintStart_toStartOf="@+id/searchViewMain"
+        app:layout_constraintTop_toBottomOf="@+id/searchViewMain" />
 
 
     <com.airbnb.lottie.LottieAnimationView
@@ -155,32 +157,33 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchView"
+        app:layout_constraintTop_toBottomOf="@+id/searchViewMain"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_rawRes="@raw/sun_other" />
+        app:lottie_rawRes="@raw/cloudslottie"
+     />
 
-<!--    <View-->
-<!--        android:id="@+id/view"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="330dp"-->
-<!--        android:background="@drawable/rec_white_bg_top_radius"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.0"-->
-<!--        app:layout_constraintStart_toStartOf="parent" />-->
+    <!--    <View-->
+    <!--        android:id="@+id/view"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="330dp"-->
+    <!--        android:background="@drawable/rec_white_bg_top_radius"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.0"-->
+    <!--        app:layout_constraintStart_toStartOf="parent" />-->
 
     <View
         android:id="@+id/view2"
         android:layout_width="0dp"
         android:layout_height="270dp"
         android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
         android:background="@drawable/rec_top_bottom_inside_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintTop_toBottomOf="@+id/todaysConditionbelowDay" />
 
     <View
         android:id="@+id/view3"
@@ -197,7 +200,7 @@
         app:layout_constraintTop_toTopOf="@+id/view2" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/tempImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -208,20 +211,20 @@
         app:layout_constraintTop_toTopOf="@+id/view3" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/tempReading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:fontFamily="@font/hind_vadodara_medium"
         android:text="70"
         android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/textView14"
+        app:layout_constraintEnd_toEndOf="@+id/tempType"
         app:layout_constraintHorizontal_bias="0.461"
-        app:layout_constraintStart_toStartOf="@+id/textView14"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintStart_toStartOf="@+id/tempType"
+        app:layout_constraintTop_toBottomOf="@+id/tempImage" />
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/tempType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/hind_vadodara_medium"
@@ -229,7 +232,7 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/view3"
         app:layout_constraintStart_toStartOf="@+id/view3"
-        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+        app:layout_constraintTop_toBottomOf="@+id/tempReading" />
 
     <View
         android:id="@+id/windSpeed"
@@ -249,7 +252,7 @@
         app:layout_constraintEnd_toEndOf="@+id/windSpeed"
         app:layout_constraintHorizontal_bias="0.543"
         app:layout_constraintStart_toStartOf="@+id/windSpeed"
-        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+        app:layout_constraintTop_toTopOf="@+id/tempImage" />
 
     <TextView
         android:id="@+id/windSpeedReading"
@@ -262,7 +265,7 @@
         app:layout_constraintEnd_toEndOf="@+id/windSpeedtxt"
         app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="@+id/windSpeedtxt"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/tempImage" />
 
     <TextView
         android:id="@+id/windSpeedtxt"
@@ -273,7 +276,7 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/windSpeed"
         app:layout_constraintStart_toStartOf="@+id/windSpeed"
-        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+        app:layout_constraintTop_toBottomOf="@+id/tempReading" />
 
     <View
         android:id="@+id/rainView"
@@ -288,30 +291,34 @@
         app:layout_constraintTop_toTopOf="@+id/windSpeed" />
 
     <ImageView
-        android:id="@+id/rainImage"
+        android:id="@+id/conditionImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/rain_thunder"
         app:layout_constraintEnd_toEndOf="@+id/rainView"
         app:layout_constraintHorizontal_bias="0.543"
         app:layout_constraintStart_toEndOf="@+id/windSpeed"
-        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+        app:layout_constraintTop_toTopOf="@+id/tempImage" />
 
     <TextView
-        android:id="@+id/rainReading"
-        android:layout_width="wrap_content"
+        android:id="@+id/conditionType"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
+        android:ellipsize="end"
         android:fontFamily="@font/hind_vadodara_medium"
+        android:gravity="center"
+        android:maxLines="1"
         android:text="Rain"
         android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/rainTxt"
+        app:layout_constraintBottom_toTopOf="@id/ConditionTxt"
+        app:layout_constraintEnd_toEndOf="@+id/ConditionTxt"
         app:layout_constraintHorizontal_bias="0.461"
-        app:layout_constraintStart_toStartOf="@+id/rainTxt"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintStart_toStartOf="@+id/ConditionTxt"
+        app:layout_constraintTop_toBottomOf="@+id/tempImage" />
 
     <TextView
-        android:id="@+id/rainTxt"
+        android:id="@+id/ConditionTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/hind_vadodara_medium"
@@ -319,14 +326,14 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/rainView"
         app:layout_constraintStart_toStartOf="@+id/rainView"
-        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+        app:layout_constraintTop_toBottomOf="@+id/tempReading" />
 
     <View
         android:id="@+id/sunRiseView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/view_rec_bg_top_bottom_radius_white_transpancy"
         android:layout_marginBottom="5dp"
+        android:background="@drawable/view_rec_bg_top_bottom_radius_white_transpancy"
         app:layout_constraintBottom_toBottomOf="@+id/view2"
         app:layout_constraintEnd_toEndOf="@+id/view3"
         app:layout_constraintStart_toStartOf="@+id/view3"
@@ -472,5 +479,17 @@
         app:layout_constraintStart_toStartOf="@+id/view2"
         app:layout_constraintTop_toBottomOf="@+id/view2" />
 
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include layout="@layout/shimmer_for_main" />
+    </com.facebook.shimmer.ShimmerFrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
